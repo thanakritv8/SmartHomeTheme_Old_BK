@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.default.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/owl.carousel.js"></script>
+<style>
+	.item {
+		height: 92vh;
+		margin:0;
+	}
+	.header {
+		background-color:#eee;
+		padding: 10px 0 10px 0;
+		font-weight: 600;
+	}
+	#addRoom {
+    color: #E43C3F;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+	z-index:9999;
+	}
+</style>
+</head>
+<body style="margin:0">
+
+	<div class="owl-carousel owl-theme">
+    	<div class="item">
+        	<div class="row">
+            	<div class="col-12 header" align="center">PAGE 1</div>
+            </div>
+            <div class="container">
+                <div class="row" align="center" style="padding: 20px 0 20px 0">
+                    <div class="col-4 col-sm-4 col-md-4">
+                    	<span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-bath fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4">
+                    	<span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-bed fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4">
+                    	<span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+        	<div class="row">
+            	<div class="col-12 header" align="center">PAGE 2</div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+						1
+                    </div>
+                    <div class="col-4">
+                    	2
+                    </div>
+                    <div class="col-4">
+                    	3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="addRoom" class="disable-owl-swipe">
+    	<span class="fa-stack fa-2x">
+        	<i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+	jQuery(document).ready(function($) {
+		$('.owl-carousel').owlCarousel({
+			responsiveClass: true,
+			items: 1,
+			loop: false,
+			dots:true,
+			autoplayHoverPause:false,
+			autoHeight:true,
+		});
+	});
+</script>
+<script>
+	$(".disable-owl-swipe").on("touchstart mousedown", function(e) {
+		// Prevent carousel swipe
+		e.stopPropagation();
+	})
+</script>
